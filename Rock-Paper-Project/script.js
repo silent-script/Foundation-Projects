@@ -7,12 +7,6 @@ function getComputerChoice() {
     return choice[index];
 }
 
-function getHumanChoice() {
-    let move = prompt("Enter the move: ")
-    move = move.toLowerCase();
-    return move;
-}
-
 function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
@@ -42,11 +36,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound();
-    }
+    // for (let i = 0; i < 5; i++) {
+    //     playRound();
+    // }
     console.log("Your Score: "+humanScore+"\n"+"Computer Score: "+computerScore);
     humanScore == computerScore ? console.log(" It's a tie!!") : humanScore > computerScore ? console.log("you win!!") : console.log("you lose!!");
 };
 
-playGame()
+// playGame()
+
+const rock = document.querySelector('.rock')
+const paper = document.querySelector('.paper')
+const scissors = document.querySelector('.scissors')
+
+rock.addEventListener('click', () => {
+    console.log(rock.className)
+})
